@@ -1,0 +1,139 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "name": "Brightwoods Cabins",
+      "location": "Bridlepath, Ontario, Canada",
+      "rating": 4.9,
+      "isSuperhost": true,
+      "price": 658,
+      "image": "/assets/images/property-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Missisuaga Aistream",
+      "location": "Missisauga, Ontario, Canada",
+      "rating": 4.8,
+      "isSuperhost": true,
+      "price": 502,
+      "image": "/assets/images/property-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Urban Loft",
+      "location": "Georgina Bay, Ontario, Canada",
+      "rating": 4.5,
+      "isSuperhost": true,
+      "price": 410,
+      "image": "/assets/images/property-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Forestville Cottages",
+      "location": "Simcoe, Ontario Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 325,
+      "image": "/assets/images/property-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Unionville Logde",
+      "location": "Markham, Ontario Canada",
+      "rating": 4.6,
+      "isSuperhost": true,
+      "price": 485,
+      "image": "/assets/images/property-5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Niagara Homes",
+      "location": "Niagara, Ontario, Canada",
+      "rating": 4.9,
+      "isSuperhost": true,
+      "price": 655,
+      "image": "/assets/images/property-6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Sunny Estate",
+      "location": "Barcort, Ontario Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 320,
+      "image": "/assets/images/property-7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Lawrence Hills",
+      "location": "Lawrence, Ontario Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 350,
+      "image": "/assets/images/property-8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Simcoe Lake Lodge",
+      "location": "Simcoe, Ontario, Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 395,
+      "image": "/assets/images/property-9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Wasaga Beach Home",
+      "location": "Georgina Bay, Ontario, Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 385,
+      "image": "/assets/images/property-10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Banff Hills",
+      "location": "Banff, Alberta, Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 385,
+      "image": "/assets/images/property-11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Creemore Canada",
+      "location": "Creemore, Alberta, Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 385,
+      "image": "/assets/images/property-12.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Kawartha Lakes",
+      "location": "Kawartha, Alberta, Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 385,
+      "image": "/assets/images/property-13.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Revelstoke Cabin",
+      "location": "Revelstoke, Alberta, Canada",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 385,
+      "image": "/assets/images/property-14.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Brightwoods Estate",
+      "location": "Brightwoods Estate",
+      "rating": 5.0,
+      "isSuperhost": true,
+      "price": 385,
+      "image": "/assets/images/property-15.jpg"
+    }
+  ]
+}
