@@ -1,6 +1,6 @@
 export const ROUTES = {
   // Public routes
-  HOME: '/property',
+  HOME: '/',
   SIGNIN: '/',
   SIGNUP: '/signup',
   

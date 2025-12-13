@@ -7,7 +7,6 @@ import { useState } from "react";
 import { ZodError } from "zod";
 import { Person, LockIcon } from "@/components/icons";
 import Button from "@/components/button/Button";
-import Input from "@/components/input/Input";
 import { signInSchema } from "@/lib/validation/auth";
 import { useAuthStore } from "@/store/authStore";
 import { ROUTES } from "@/lib/routes";
@@ -86,82 +85,86 @@ const SigninForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md flex flex-col gap-6">
-      <h1 className="text-2xl font-bold text-gray-900 text-center mb-2">
+    <div className="signin-form-container">
+      <h1 className="signin-form-title">
         Sign In
       </h1>
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-        <Input
-          type="email"
-          name="email"
-          placeholder="Email address"
-          value={formData.email}
-          onChange={handleChange}
-          icon={<Person />}
-          error={errors.email}
-          size="md"
-        />
+      
+      <div className="signin-form-content">
+        <form className="signin-form-fields" onSubmit={handleSubmit}>
+          <div className="signin-form-inputs">
+            <div className="auth-input-wrapper">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <Person className="w-5 h-5" />
+            </div>
+            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
 
-        <Input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          icon={<LockIcon />}
-          error={errors.password}
-          size="md"
-        />
+            <div className="auth-input-wrapper">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+              <LockIcon />
+            </div>
+            {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+          </div>
 
-        <Button type="submit" variant="primary" className="w-50 cursor-pointer" disabled={isLoading}>
-          {isLoading ? "Loading..." : "Sign In"}
-        </Button>
-      </form>
+          <Button type="submit" variant="primary" className="signin-button" disabled={isLoading}>
+            {isLoading ? "Loading..." : "Sign In"}
+          </Button>
+        </form>
 
-      <div className="flex items-center my-2">
-        <div className="flex-grow border-t border-gray-200" />
-        <span className="mx-4 text-gray-400 text-sm">Or sign in with</span>
-        <div className="flex-grow border-t border-gray-200" />
-      </div>
+        <div className="signin-divider" />
 
-      <div className="flex gap-4 justify-center">
-        <button className="flex flex-col items-center bg-gray-50 rounded-lg px-6 py-4 border border-gray-200 hover:border-orange-500 transition-colors">
-          <Image
-            src="/assets/images/google.png"
-            alt="Google"
-            width={24}
-            height={24}
-            className="mb-1"
-          />
-          <span className="text-sm text-gray-700">Google</span>
-        </button>
-        <button className="flex flex-col items-center bg-gray-50 rounded-lg px-6 py-4 border border-gray-200 hover:border-orange-500 transition-colors">
-          <Image
-            src="/assets/images/facebook.png"
-            alt="Facebook"
-            width={24}
-            height={24}
-            className="mb-1"
-          />
-          <span className="text-sm text-gray-700">Facebook</span>
-        </button>
-        <button className="flex flex-col items-center bg-gray-50 rounded-lg px-6 py-4 border border-gray-200 hover:border-orange-500 transition-colors">
-          <Image
-            src="/assets/images/apple.png"
-            alt="Apple"
-            width={24}
-            height={24}
-            className="mb-1"
-          />
-          <span className="text-sm text-gray-700">Apple</span>
-        </button>
-      </div>
+        <div className="signin-social-section">
+          <p className="signin-social-label">Or sign in with</p>
+          
+          <div className="signin-social-buttons">
+            <button className="signin-social-button">
+              <Image
+                src="/assets/images/google.png"
+                alt="Google"
+                width={40}
+                height={40}
+              />
+              <span>Google</span>
+            </button>
+            <button className="signin-social-button">
+              <Image
+                src="/assets/images/facebook.png"
+                alt="Facebook"
+                width={40}
+                height={40}
+              />
+              <span>Facebook</span>
+            </button>
+            <button className="signin-social-button">
+              <Image
+                src="/assets/images/apple.png"
+                alt="Apple"
+                width={40}
+                height={40}
+              />
+              <span>Apple</span>
+            </button>
+          </div>
+        </div>
 
-      <div className="text-center mt-2 text-sm text-gray-700">
-        Don't have an account yet?{" "}
-        <Link href={ROUTES.SIGNUP} className="text-orange-500 font-semibold hover:underline">
-          Sign up
-        </Link>
+        <div className="signin-signup-link">
+          Don't have an account yet?{" "}
+          <Link href={ROUTES.SIGNUP} className="text-orange-500 font-semibold hover:underline">
+            Sign up
+          </Link>
+        </div>
       </div>
     </div>
   );
