@@ -90,41 +90,47 @@ const SignupForm = () => {
       <div className="signin-form-content">
         <form className="signin-form-fields" onSubmit={handleSubmit}>
           <div className="signin-form-inputs">
-            <div className="auth-input-wrapper">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email address"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <Person className="w-5 h-5" />
+            <div>
+              <div className="auth-input-wrapper">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <Person className="w-5 h-5" />
+              </div>
+              {errors.email && <p className="text-red-600 text-xs font-medium mt-1.5 ml-0">{errors.email}</p>}
             </div>
-            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
 
-            <div className="auth-input-wrapper">
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-              />
-              <LockIcon />
+            <div>
+              <div className="auth-input-wrapper">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+                <LockIcon />
+              </div>
+              {errors.password && <p className="text-red-600 text-xs font-medium mt-1.5 ml-0">{errors.password}</p>}
             </div>
-            {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
 
-            <div className="auth-input-wrapper">
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Confirm password"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-              />
-              <LockIcon />
+            <div>
+              <div className="auth-input-wrapper">
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm password"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                />
+                <LockIcon />
+              </div>
+              {errors.confirmPassword && <p className="text-red-600 text-xs font-medium mt-1.5 ml-0">{errors.confirmPassword}</p>}
             </div>
-            {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
           </div>
 
           <Button type="submit" variant="primary" className="signin-button" disabled={isLoading}>
