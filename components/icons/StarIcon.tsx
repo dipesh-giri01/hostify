@@ -1,4 +1,4 @@
-const StarIcon = ({ className = "" }: { className?: string }) => (
+const StarIcon = ({ className = "", style }: { className?: string; style?: React.CSSProperties }) => (
   <svg
     width="13"
     height="13"
@@ -6,6 +6,7 @@ const StarIcon = ({ className = "" }: { className?: string }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
+    style={style}
   >
     <path
       fillRule="evenodd"
