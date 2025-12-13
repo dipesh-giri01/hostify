@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Logo } from "@/app/icons";
+import { Logo } from "@/components/icons";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -16,8 +16,8 @@ const Navbar = () => {
 
 
   return (
-    <header className="w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 py-3.5 px-5">
-      <div className="max-w-6xl mx-auto h-10 flex items-center justify-between">
+    <header className="w-full bg-white dark:bg-gray-900 border-b border-light-e8 sticky top-0 z-50 header-height flex items-center justify-center px-5">
+      <div className="header-content flex items-center justify-between h-full">
         {/* Logo - Left */}
         <div className="flex-shrink-0">
           <Link

@@ -23,17 +23,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "font-semibold rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500";
+      "cursor-pointer font-semibold rounded-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500";
 
     const variants = {
-      primary: "bg-orange-500 text-white hover:bg-orange-300",
-      secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",
-      outline: "border-2 border-orange-500 text-orange-500 hover:bg-orange-50",
+      primary: "cursor-pointer bg-orange-500 text-white hover:bg-orange-400",
+      secondary: "cursor-pointer bg-gray-200 text-gray-900 hover:bg-gray-300",
+      outline: "cursor-pointer border border-orange-500 text-orange-500 hover:bg-orange-50",
     };
 
     const sizes = {
       sm: "px-3 py-2 text-sm",
-      md: "px-5 py-4 text-base", // 20px left/right padding, 16px top/bottom = 58px height
+      md: "px-9 h-14 text-base",
       lg: "px-6 py-3 text-lg",
     };
 
