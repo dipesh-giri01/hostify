@@ -7,7 +7,7 @@ interface InputProps
   label?: string;
   error?: string;
   icon?: React.ReactNode;
-  variant?: "default" | "auth" | "search";
+  variant?: "default" | "auth" | "search" | "accommodation";
   size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
 }
@@ -33,6 +33,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       default: "border-gray-d9 focus:ring-orange-500",
       auth: "border-gray-d9 focus:ring-orange-500",
       search: "border-gray-d9 focus:ring-orange-500",
+      accommodation: "border-gray-d9 focus:ring-orange-500",
     };
 
     const sizes = {
@@ -43,17 +44,17 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     const sizeStyles: Record<string, string> = {
       sm: "px-3 py-2 text-sm h-10",
-      md: "px-3 py-4 text-base h-[52px]",
-      lg: "px-3 py-4 text-base h-[62px]",
+      md: "px-3 py-2 text-base h-[56px]",
+      lg: "px-3 py-2 text-base h-[62px]",
     };
 
     const widthClass = fullWidth ? "w-full" : "";
+    const accommodationWidthClass = variant === "accommodation" ? "w-[567.5px]" : "";
 
-    const containerClass = icon ? "relative" : "";
     const inputPaddingClass = icon ? "pr-10" : "";
 
     return (
-      <div className={containerClass}>
+      <div>
         {label && (
           <label className="block text-sm font-medium text-gray-900 mb-2">
             {label}
@@ -61,7 +62,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
         <input
           ref={ref}
-          className={`${baseStyles} ${sizeStyles[size]} ${widthClass} ${inputPaddingClass} ${className}`}
+          className={`${baseStyles} ${sizeStyles[size]} ${widthClass} ${accommodationWidthClass} ${inputPaddingClass} ${className}`}
           {...props}
         />
         {icon && (

@@ -86,7 +86,7 @@ export default function PropertyDetailsPage() {
       {/* Main Content */}
       <main className="w-full flex flex-col items-center px-5 lg:px-0 py-0">
         {/* Hero Section */}
-        <section className="w-full header-content flex flex-col lg:flex-row gap-hero mt-8 mb-11">
+        <section className="w-full header-content flex flex-row flex-wrap gap-hero mt-8 mb-11">
           {/* Gallery */}
           <PropertyGallery images={gallery} />
 

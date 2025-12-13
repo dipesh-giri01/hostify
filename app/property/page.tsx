@@ -78,17 +78,19 @@ export default function StaysPage() {
         <div className="absolute inset-0 bg-black/20 dark:bg-black/40" />
         
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="mb-12">
-            <h1 className="text-5xl font-bold mb-3 text-black dark:text-white">
-              Find a <span className="text-orange-500">host</span> for every journey
-            </h1>
-            <p className="text-lg text-gray-800 dark:text-gray-200">
-              Discover the best local rental properties that fits your every travel needs
-            </p>
+        <div className="relative z-10 w-full flex justify-center">
+          <div className="flex flex-col gap-12" style={{ width: '1340px', maxWidth: '1340px' }}>
+            <div>
+              <h1 className="text-5xl font-bold mb-3 text-black dark:text-white">
+                Find a <span className="text-orange-500">host</span> for every journey
+              </h1>
+              <p className="text-lg text-gray-800 dark:text-gray-200">
+                Discover the best local rental properties that fits your every travel needs
+              </p>
+            </div>
+            
+            <SearchBar />
           </div>
-          
-          <SearchBar />
         </div>
       </section>
 

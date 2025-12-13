@@ -14,8 +14,8 @@ export default function PropertyGallery({ images }: PropertyGalleryProps) {
   const displayImages = images.slice(0, 5);
 
   return (
-    <div className="flex flex-col gap-2.5 gallery-min-width hero-width hero-height">
-      {/* Main Image - 812x438 with 8px border-radius */}
+    <div className="flex flex-col gallery-container">
+      {/* Main Image */}
       <div className="w-full gallery-height rounded-lg overflow-hidden relative">
         <Image 
           src={displayImages[selectedImageIndex]} 

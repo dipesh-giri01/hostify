@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Star, CalendarIcon, SuperhostBadge } from '@/components/icons';
 import FavoriteButton from '@/components/buttons/FavoriteButton';
+import Button from '../button/Button';
 
 interface InfoCardProps {
   property: {
@@ -16,59 +17,87 @@ interface InfoCardProps {
 
 export default function InfoCard({ property }: InfoCardProps) {
   return (
-    <div className="flex flex-col justify-center w-full lg:info-card-width lg:info-card-height bg-white rounded-lg p-6 sm:p-8 lg:p-9 gap-7 border border-gray-200">
-      {/* Title, location, heart */}
-      <div className="flex flex-col gap-4 w-full">
-        <div className="flex flex-col gap-3 w-full">
-          <div className="flex flex-row items-start justify-between gap-4 w-full">
-            <div className="flex flex-col gap-2">
-              <h1 className="title-size font-semibold tracking-wider text-gray-900 font-archivo">{property.name}</h1>
-              <span className="location-size font-normal tracking-wider text-gray-900 font-archivo">{property.location}</span>
+    <div className="flex flex-col items-center justify-center bg-white rounded-[7px] border border-gray-d9 info-card-container">
+      {/* Main content */}
+      <div className="flex flex-col items-start w-full info-card-content">
+        
+        {/* Title section */}
+        <div className="flex flex-col items-start w-full info-card-title-section">
+          
+          {/* Name, location, heart */}
+          <div className="flex flex-col items-start w-full info-card-name-section">
+            {/* Name/location with heart */}
+            <div className="flex flex-row items-center justify-between w-full gap-1.5">
+              <div className="flex flex-col items-start flex-grow info-card-name-row">
+                <h1 className="font-archivo info-card-title">
+                  {property.name}
+                </h1>
+                <span className="font-archivo info-card-location">
+                  {property.location}
+                </span>
+              </div>
+              <div className="heart-icon-size flex items-center justify-center flex-shrink-0">
+                <FavoriteButton propertyId={property.id} />
+              </div>
             </div>
-            <div className="heart-icon-size flex items-center justify-center flex-shrink-0">
-              <FavoriteButton propertyId={property.id} />
+
+            {/* Rating and reviews */}
+            <div className="flex flex-row items-center gap-1.5 w-full">
+              <div className="flex flex-row items-center gap-1">
+                <span className="font-archivo info-card-rating">
+                  {property.rating}
+                </span>
+                <Star className="w-4 h-4" style={{ color: '#FAC50A' }} />
+              </div>
+              <div className="border-l border-gray-d9 px-2">
+                <Link href="#reviews" className="font-archivo info-card-reviews-link underline hover:opacity-80">
+                  200 Reviews
+                </Link>
+              </div>
             </div>
           </div>
-          {/* Rating and reviews */}
-          <div className="flex flex-row items-center gap-2 w-full mt-1">
-            <div className="flex flex-row items-center gap-1">
-              <span className="text-base font-semibold leading-5 tracking-wider text-gray-900 font-archivo">{property.rating}</span>
-              <Star className="w-4 h-4" style={{ color: '#FAC50A' }} />
-            </div>
-            <div className="border-l border-gray-200 px-2 ml-1">
-              <Link href="#reviews" className="text-base leading-5 underline tracking-wider text-orange-500 font-archivo text-sm hover:text-orange-600">
-                200 Reviews
-              </Link>
-            </div>
-          </div>
+
+          {/* Description */}
+          <p className="w-full tracking-wider font-archivo info-card-description">
+            Welcome to our cozy cabin retreat nestled in the heart of {property.location}! Surrounded by lush landscapes and tranquil trails, this charming getaway offers the perfect blend of rustic elegance and modern comfort.
+          </p>
         </div>
-        {/* Description */}
-        <p className="text-base leading-relaxed tracking-wider text-gray-900 font-archivo mt-3">
-          Welcome to our cozy cabin retreat nestled in the heart of {property.location}! Surrounded by lush landscapes and tranquil trails, this charming getaway offers the perfect blend of rustic elegance and modern comfort.
-        </p>
+
+        {/* Price section and Button */}
+        <div className="flex flex-col items-start w-full info-card-price-section">
+          {/* Price and Best time */}
+          <div className="flex flex-row items-center justify-between w-full info-card-price-row">
+            <div className="flex flex-row items-end gap-1">
+              <span className="font-archivo info-card-price">
+                ${property.price}
+              </span>
+              <span className="font-archivo info-card-price-unit">
+                /night
+              </span>
+            </div>
+            <div className="flex flex-row items-center gap-1.5 flex-shrink-0">
+              <CalendarIcon className="w-6 h-6 text-orange-500" />
+              <span className="font-archivo info-card-best-time">
+                Best time to Book
+              </span>
+            </div>
+          </div>
+          
+          {/* Book button */}
+          <Button className="info-card-book-button hover:bg-orange-600">
+            <span className="info-card-book-button-text">
+              Book this home
+            </span>
+          </Button>
+        </div>
       </div>
 
-      {/* Price, best time, button */}
-      <div className="flex flex-col gap-5 w-full">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-4">
-          <div className="flex flex-row items-end gap-1">
-            <span className="price-large font-bold tracking-wider text-gray-900 font-archivo">${property.price}</span>
-            <span className="price-per-night font-normal tracking-wider text-gray-900 font-archivo pb-1">/night</span>
-          </div>
-          <div className="flex flex-row items-center gap-2 flex-shrink-0">
-            <CalendarIcon className="w-6 h-6 text-orange-500" />
-            <span className="text-base leading-5 tracking-wider text-orange-500 font-archivo text-sm whitespace-nowrap">Best time to Book</span>
-          </div>
-        </div>
-        <button className="w-full h-14 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition duration-200 shadow-sm">
-          <span className="text-white text-base font-semibold leading-7 tracking-widest font-archivo">Book this home</span>
-        </button>
-      </div>
-
-      {/* Host info */}
-      <div className="flex flex-col gap-3 w-full">
-        <span className="text-base leading-5 text-gray-600 font-archivo">Hosted by:</span>
-        <div className="flex flex-row items-center gap-3 border-t border-gray-200 pt-3 w-full">
+      {/* Frame 93 - Host info */}
+      <div className="flex flex-col items-start w-full info-card-host-section">
+        <span className="font-archivo info-card-hosted-by">
+          Hosted by:
+        </span>
+        <div className="flex flex-row items-center w-full info-card-host-row">
           <div className="host-avatar-size rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
             <Image 
               src="/assets/images/host.jpg" 
@@ -78,15 +107,15 @@ export default function InfoCard({ property }: InfoCardProps) {
               className="object-cover w-full h-full" 
             />
           </div>
-          <div className="flex flex-col gap-0.5 flex-grow">
-            <span className="text-base font-semibold leading-6 tracking-wider text-gray-900 font-archivo">
+          <div className="flex flex-col flex-grow info-card-host-info">
+            <span className="font-archivo info-card-host-name">
               Michelle Ward
             </span>
-            <span className="text-sm font-normal leading-4 tracking-wider text-gray-500 font-archivo">
+            <span className="font-archivo info-card-host-joined">
               Joined in May 2021
             </span>
           </div>
-          <div className="flex flex-row items-center gap-1 bg-orange-100 rounded-full px-3 py-2 flex-shrink-0">
+          <div className="info-card-superhost-badge">
             <SuperhostBadge />
           </div>
         </div>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Star } from '@/components/icons';
 import FavoriteButton from '@/components/buttons/FavoriteButton';
+import { ROUTES } from '@/lib/routes';
 
 interface SimilarStay {
   id?: number;
@@ -32,7 +33,7 @@ export default function SimilarStays({ stays }: SimilarStaysProps) {
     <section className="w-full header-content flex flex-col gap-5 mb-11">
       <div className="flex flex-row justify-between items-center w-full mb-1">
         <h3 className="text-2xl font-semibold leading-7 tracking-wider text-gray-900 font-archivo">Similar stays</h3>
-        <Link href="/stays" className="text-base font-semibold leading-7 tracking-widest text-orange-500 font-archivo hover:text-orange-600 transition">View all</Link>
+        <Link href={ROUTES.PROPERTIES} className="text-base font-semibold leading-7 tracking-widest text-orange-500 font-archivo hover:text-orange-600 transition">View all</Link>
       </div>
 
       {/* Stays Grid - 3 items no carousel */}

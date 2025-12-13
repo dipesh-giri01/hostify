@@ -58,14 +58,14 @@ export default function AboutSection({
               const IconComponent = item.icon;
               return (
                 <div key={i} className="flex flex-row items-center gap-5 w-full amenity-item-height">
-                  <div className="amenity-icon-size rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0">
+                  <div className="amenity-icon-size rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(250, 197, 10, 0.24)' }}>
                     <IconComponent />
                   </div>
                   <div className="flex flex-col gap-0.5 flex-grow">
                     <span className="text-lg font-semibold leading-7 tracking-wider text-gray-900 font-archivo">
                       {item.title}
                     </span>
-                    <span className="text-base font-normal leading-5 tracking-wider text-gray-500 font-archivo">
+                    <span className="text-base font-normal leading-5 tracking-wider font-archivo" style={{ color: '#7A7A7A' }}>
                       {item.desc}
                     </span>
                   </div>
