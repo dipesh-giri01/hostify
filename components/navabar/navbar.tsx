@@ -11,7 +11,7 @@ import { useAuthStore } from "@/store/authStore";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const { isLoggedIn, userEmail, logout } = useAuthStore();
+  const { isLoggedIn, currentUserEmail, logout } = useAuthStore();
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -93,7 +93,7 @@ const Navbar = () => {
                   aria-label="User profile menu"
                 >
                   <User className="w-5 h-5" />
-                  <span className="hidden sm:inline text-sm font-medium truncate max-w-xs">{userEmail}</span>
+                  <span className="hidden sm:inline text-sm font-medium truncate max-w-xs">{currentUserEmail}</span>
                 </button>
 
                 {/* Dropdown Menu */}
