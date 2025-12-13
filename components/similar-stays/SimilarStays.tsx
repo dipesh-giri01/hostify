@@ -50,6 +50,7 @@ export default function SimilarStays({ stays }: SimilarStaysProps) {
                 alt={stay.name} 
                 width={160} 
                 height={110} 
+                loading="lazy"
                 className="object-cover rounded-lg w-full h-full" 
               />
               {/* Favorite Button - Top Right */}

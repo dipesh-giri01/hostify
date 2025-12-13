@@ -10,7 +10,7 @@ interface PropertyGalleryProps {
 export default function PropertyGallery({ images }: PropertyGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   
-  // Keep only 5 images
+  // showing 5 images for gallery 
   const displayImages = images.slice(0, 5);
 
   return (
@@ -39,6 +39,7 @@ export default function PropertyGallery({ images }: PropertyGalleryProps) {
               alt={`Gallery thumbnail ${i + 1}`} 
               width={160} 
               height={86} 
+              loading="lazy"
               className="object-cover w-full h-full" 
             />
           </div>

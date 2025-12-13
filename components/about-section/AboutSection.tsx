@@ -1,4 +1,5 @@
 import { detailCards } from '@/app/constants/detailCards';
+import Button from '@/components/button/Button';
 
 interface AboutSectionProps {
   propertyName: string;
@@ -20,8 +21,8 @@ export default function AboutSection({
         <h2 className="text-2xl font-semibold leading-7 tracking-wider text-gray-900 font-archivo mb-5">
           About this home
         </h2>
-        <div className="flex flex-col lg:flex-row gap-description">
-          <div className="about-description-container">
+        <div className="flex flex-col lg:flex-row gap-description w-full">
+          <div className="about-description-container w-full lg:w-auto">
             <p className="about-description-text">
               Welcome to {propertyName}, your idyllic retreat nestled in the heart of {propertyLocation}! Our cozy cabin, surrounded by the tranquility of nature's embrace, is designed to provide the ultimate relaxing getaway.<br />
               {showFullAbout ? (
@@ -41,12 +42,14 @@ export default function AboutSection({
                 </>
               )}
             </p>
-            <button 
+            <Button 
               onClick={onToggleShowMore}
-              className="about-show-more-button"
+              variant="secondary"
+              size="sm"
+              className="cursor-pointer mt-4"
             >
               {showFullAbout ? "Show less" : "Show more"}
-            </button>
+            </Button>
           </div>
           
           {/* Detail Cards */}

@@ -16,7 +16,7 @@ interface InfoCardProps {
 
 export default function InfoCard({ property }: InfoCardProps) {
   return (
-    <div className="flex flex-col justify-center info-card-width info-card-height bg-white rounded-lg p-9 gap-7 border border-gray-200">
+    <div className="flex flex-col justify-center w-full lg:info-card-width lg:info-card-height bg-white rounded-lg p-6 sm:p-8 lg:p-9 gap-7 border border-gray-200">
       {/* Title, location, heart */}
       <div className="flex flex-col gap-4 w-full">
         <div className="flex flex-col gap-3 w-full">
@@ -50,14 +50,14 @@ export default function InfoCard({ property }: InfoCardProps) {
 
       {/* Price, best time, button */}
       <div className="flex flex-col gap-5 w-full">
-        <div className="flex flex-row items-center justify-between w-full">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-4">
           <div className="flex flex-row items-end gap-1">
             <span className="price-large font-bold tracking-wider text-gray-900 font-archivo">${property.price}</span>
             <span className="price-per-night font-normal tracking-wider text-gray-900 font-archivo pb-1">/night</span>
           </div>
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 flex-shrink-0">
             <CalendarIcon className="w-6 h-6 text-orange-500" />
-            <span className="text-base leading-5 tracking-wider text-orange-500 font-archivo text-sm">Best time to Book</span>
+            <span className="text-base leading-5 tracking-wider text-orange-500 font-archivo text-sm whitespace-nowrap">Best time to Book</span>
           </div>
         </div>
         <button className="w-full h-14 bg-orange-500 rounded-lg flex items-center justify-center hover:bg-orange-600 transition duration-200 shadow-sm">

@@ -4,6 +4,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border-light: #E8ECF2;
+  --border-gray: #D9D9D9;
 }
 
 @theme inline {
@@ -11,6 +13,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-archivo: var(--font-archivo);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,8 +23,356 @@
   }
 }
 
+@layer components {
+  /* Custom border colors */
+  .border-light {
+    @apply border-gray-100;
+    border-color: var(--border-light);
+  }
+
+  .border-gray-d9 {
+    border-color: var(--border-gray);
+  }
+
+  /* Archivo Font Utilities */
+  .font-archivo {
+    font-family: var(--font-archivo);
+  }
+
+  /* Archivo Specific Sizes from Figma */
+  .text-archivo-hero {
+    font-family: var(--font-archivo);
+    font-size: 40.3989px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+  }
+
+  .text-archivo-subtitle {
+    font-family: var(--font-archivo);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+
+  .text-archivo-heading {
+    font-family: var(--font-archivo);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+
+  .text-archivo-nav {
+    font-family: var(--font-archivo);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  /* Custom sizes */
+  .w-form {
+    width: 1340px;
+  }
+
+  .h-form {
+    height: 86px;
+  }
+
+  .w-input-accommodation {
+    width: 567.5px;
+  }
+
+  .w-input-date {
+    width: 181.17px;
+  }
+
+  .h-input {
+    height: 56px;
+  }
+
+  .min-w-accommodation {
+    min-width: 290px;
+  }
+
+  .max-w-accommodation {
+    max-width: 567.5px;
+  }
+
+  .min-w-date {
+    min-width: 120px;
+  }
+
+  .max-w-date {
+    max-width: 181.17px;
+  }
+
+  /* Custom gap */
+  .gap-input {
+    gap: 12px;
+  }
+
+  .gap-input-sm {
+    gap: 10px;
+  }
+
+  /* Custom border radius */
+  .rounded-sm {
+    border-radius: 4px;
+  }
+
+  .rounded-lg-custom {
+    border-radius: 10px;
+  }
+
+  /* Custom border widths */
+  .border-3 {
+    border-width: 3px;
+  }
+
+  /* Form shadow */
+  .shadow-form {
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Header and Layout */
+  .header-height {
+    height: 68px;
+  }
+
+  .header-width {
+    width: 1440px;
+  }
+
+  .header-content {
+    width: 1340px;
+    max-width: 1340px;
+  }
+
+  /* Search Form */
+  .form-width {
+    width: 1340px;
+    max-width: 1340px;
+  }
+
+  /* Property Card */
+  .card-width {
+    width: 315px;
+  }
+
+  .card-image-height {
+    height: 300px;
+  }
+
+  /* Footer and Brand */
+  .footer-bg {
+    background-color: #F4F4F4;
+  }
+
+  .brand-height {
+    height: 41px;
+  }
+
+  /* Border Colors */
+  .border-light-e8 {
+    border-color: #E8ECF2;
+  }
+
+  .border-gray-d9 {
+    border-color: #D9D9D9;
+  }
+
+  /* Property Details Page Custom Sizes */
+  .hero-width {
+    width: 812px;
+  }
+
+  .hero-height {
+    height: 539px;
+  }
+
+  .info-card-width {
+    width: 500px;
+  }
+
+  .info-card-height {
+    height: 539px;
+  }
+
+  .gallery-height {
+    height: 438px;
+    min-height: 438px;
+    border-radius: 8px;
+  }
+
+  .gallery-thumbs-height {
+    height: 86px;
+    overflow-x: scroll;
+    gap: 10px;
+  }
+
+  .thumb-width {
+    width: 160px;
+  }
+
+  .thumb-height {
+    height: 86px;
+  }
+
+  .title-size {
+    font-size: 29px;
+    line-height: 32px;
+  }
+
+  .location-size {
+    font-size: 16px;
+    line-height: 17px;
+  }
+
+  .price-large {
+    font-size: 36px;
+    line-height: 39px;
+  }
+
+  .price-per-night {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .amenities-section-width {
+    width: 821px;
+  }
+
+  .map-section-width {
+    width: 500px;
+  }
+
+  .map-height {
+    height: 248px;
+  }
+
+  .similar-stays-card-width {
+    width: 433px;
+  }
+
+  .similar-stays-card-height {
+    height: 130px;
+  }
+
+  .similar-image-container {
+    width: 180px;
+    max-width: 180px;
+    min-width: 150px;
+    height: 130px;
+  }
+
+  .similar-content-container {
+    width: 253px;
+    min-width: 220px;
+    height: 130px;
+  }
+
+  .gap-hero {
+    gap: 28px;
+  }
+
+  .gap-card {
+    gap: 12px;
+  }
+
+  .gap-section {
+    gap: 30px;
+  }
+
+  .gap-similar {
+    gap: 20px;
+  }
+
+  .gap-description {
+    gap: 40px;
+  }
+
+  .host-avatar-size {
+    width: 50px;
+    height: 50px;
+  }
+
+  .heart-icon-size {
+    width: 36px;
+    height: 36px;
+  }
+
+  .amenity-item-height {
+    height: 60px;
+  }
+
+  .amenity-icon-size {
+    width: 60px;
+    height: 60px;
+  }
+
+  .weather-icon-size {
+    width: 47px;
+    height: 47px;
+  }
+
+  .gallery-min-width {
+    min-width: 500px;
+  }
+
+  .amenities-min-width {
+    min-width: 500px;
+  }
+
+  .similar-min-width {
+    min-width: 370px;
+  }
+
+  /* About This Home Section - Figma Specs */
+  .about-description-container {
+    width: 800px;
+    min-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .about-description-text {
+    width: 800px;
+    font-family: var(--font-archivo);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: #171E1D;
+  }
+
+  .about-show-more-button {
+    width: 87px;
+    height: 26px;
+    font-family: var(--font-archivo);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    color: #FF8D28;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .about-show-more-button:hover {
+    color: #ff7a0a;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
