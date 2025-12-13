@@ -7,133 +7,142 @@
       "rating": 4.9,
       "isSuperhost": true,
       "price": 658,
-      "image": "/assets/images/property-1.jpg"
+      "image": "/assets/images/p1.jpg"
     },
     {
       "id": 2,
       "name": "Missisuaga Aistream",
       "location": "Missisauga, Ontario, Canada",
       "rating": 4.8,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 502,
-      "image": "/assets/images/property-2.jpg"
+      "image": "/assets/images/p2.jpg"
     },
     {
       "id": 3,
       "name": "Urban Loft",
       "location": "Georgina Bay, Ontario, Canada",
       "rating": 4.5,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 410,
-      "image": "/assets/images/property-3.jpg"
+      "image": "/assets/images/p3.jpg"
     },
     {
       "id": 4,
       "name": "Forestville Cottages",
       "location": "Simcoe, Ontario Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 325,
-      "image": "/assets/images/property-4.jpg"
+      "image": "/assets/images/p4.jpg"
     },
     {
       "id": 5,
       "name": "Unionville Logde",
       "location": "Markham, Ontario Canada",
       "rating": 4.6,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 485,
-      "image": "/assets/images/property-5.jpg"
+      "image": "/assets/images/p5.jpg"
     },
     {
       "id": 6,
       "name": "Niagara Homes",
       "location": "Niagara, Ontario, Canada",
       "rating": 4.9,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 655,
-      "image": "/assets/images/property-6.jpg"
+      "image": "/assets/images/p6.jpg"
     },
     {
       "id": 7,
       "name": "Sunny Estate",
       "location": "Barcort, Ontario Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 320,
-      "image": "/assets/images/property-7.jpg"
+      "image": "/assets/images/p7.jpg"
     },
     {
       "id": 8,
       "name": "Lawrence Hills",
       "location": "Lawrence, Ontario Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 350,
-      "image": "/assets/images/property-8.jpg"
+      "image": "/assets/images/p8.jpg"
     },
     {
       "id": 9,
       "name": "Simcoe Lake Lodge",
       "location": "Simcoe, Ontario, Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 395,
-      "image": "/assets/images/property-9.jpg"
+      "image": "/assets/images/p9.jpg"
     },
     {
       "id": 10,
       "name": "Wasaga Beach Home",
       "location": "Georgina Bay, Ontario, Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 385,
-      "image": "/assets/images/property-10.jpg"
+      "image": "/assets/images/p10.jpg"
     },
     {
       "id": 11,
       "name": "Banff Hills",
       "location": "Banff, Alberta, Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 385,
-      "image": "/assets/images/property-11.jpg"
+      "image": "/assets/images/p11.jpg"
     },
     {
       "id": 12,
       "name": "Creemore Canada",
       "location": "Creemore, Alberta, Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 385,
-      "image": "/assets/images/property-12.jpg"
+      "image": "/assets/images/p12.jpg"
     },
     {
       "id": 13,
       "name": "Kawartha Lakes",
       "location": "Kawartha, Alberta, Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 385,
-      "image": "/assets/images/property-13.jpg"
+      "image": "/assets/images/p13.jpg"
     },
     {
       "id": 14,
       "name": "Revelstoke Cabin",
       "location": "Revelstoke, Alberta, Canada",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 385,
-      "image": "/assets/images/property-14.jpg"
+      "image": "/assets/images/p14.jpg"
     },
     {
       "id": 15,
       "name": "Brightwoods Estate",
       "location": "Brightwoods Estate",
       "rating": 5.0,
-      "isSuperhost": true,
+      "isSuperhost": false,
       "price": 385,
-      "image": "/assets/images/property-15.jpg"
+      "image": "/assets/images/p15.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Whistler Mountain Home",
+      "location": "Whistler, British Columbia, Canada",
+      "rating": 5.0,
+      "isSuperhost": false,
+      "price": 495,
+      "image": "/assets/images/p16.jpg"
     }
   ]
 }
