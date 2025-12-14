@@ -24,6 +24,10 @@
 }
 
 @layer components {
+  /* ============================================
+     GLOBAL UTILITIES & THEME
+     ============================================ */
+  
   /* Custom border colors */
   .border-light {
     @apply border-gray-100;
@@ -34,7 +38,9 @@
     border-color: var(--border-gray);
   }
 
-  /* Archivo Font Utilities */
+  /* ============================================
+     TYPOGRAPHY & FONT UTILITIES
+     ============================================ */
   .font-archivo {
     font-family: var(--font-archivo);
   }
@@ -70,6 +76,10 @@
     font-weight: 400;
     line-height: 100%;
   }
+
+  /* ============================================
+     LAYOUT & SPACING UTILITIES
+     ============================================ */
 
   /* Custom sizes */
   .w-form {
@@ -136,6 +146,10 @@
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.05);
   }
 
+  /* ============================================
+     HEADER & NAVIGATION STYLES
+     ============================================ */
+
   /* Header and Layout */
   .header-height {
     height: 68px;
@@ -164,6 +178,10 @@
   .card-image-height {
     height: 300px;
   }
+
+  /* ============================================
+     FOOTER & BRAND STYLES
+     ============================================ */
 
   /* Footer and Brand */
   .footer-bg {
@@ -368,6 +386,8 @@
     min-width: 370px;
   }
 
+  /* Property About Section */
+
   /* About This Home Section - Figma Specs */
   .about-description-container {
     width: 800px;
@@ -408,7 +428,11 @@
     color: #ff7a0a;
   }
 
-  /* PropertyGallery */
+  /* ============================================
+     PROPERTY DETAILS PAGE STYLES
+     ============================================ */
+
+  /* Property Gallery */
   .gallery-container {
     width: 812px;
     height: 539px;
@@ -419,6 +443,8 @@
     overflow: hidden;
     box-sizing: border-box;
   }
+
+  /* Property Info Card */
 
   /* InfoCard */
   .info-card-container {
@@ -627,7 +653,11 @@
     color: #FF8D28;
   }
 
-  /* Auth Form Input - Figma Specs */
+  /* ============================================
+     SIGN IN & SIGN UP PAGE STYLES
+     ============================================ */
+
+  /* Auth Form Input - Figma Specs with Responsive Design */
   .auth-input-wrapper {
     width: 520px;
     height: 52px;
@@ -640,6 +670,23 @@
     border: 1px solid #D9D9D9;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .auth-input-wrapper {
+      width: 100%;
+      height: 48px;
+      padding: 14px 12px;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .auth-input-wrapper {
+      height: 44px;
+      padding: 12px 10px;
+      gap: 10px;
+    }
   }
 
   .auth-input-wrapper input {
@@ -657,6 +704,13 @@
     flex: 1;
   }
 
+  @media (max-width: 480px) {
+    .auth-input-wrapper input {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
   .auth-input-wrapper svg {
     width: 20px;
     height: 20px;
@@ -664,7 +718,14 @@
     color: #787878;
   }
 
-  /* Sign In Form - Figma Specs */
+  @media (max-width: 480px) {
+    .auth-input-wrapper svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  /* Sign In Form - Figma Specs with Responsive Design */
   .signin-form-container {
     width: 600px;
     max-width: 600px;
@@ -675,6 +736,25 @@
     align-items: center;
     background: #FFFFFF;
     border-radius: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .signin-form-container {
+      width: 90%;
+      max-width: 100%;
+      padding: 24px 20px;
+      gap: 20px;
+      border-radius: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .signin-form-container {
+      width: 100%;
+      padding: 20px 16px;
+      gap: 16px;
+      border-radius: 10px;
+    }
   }
 
   .signin-form-title {
@@ -689,12 +769,34 @@
     text-align: center;
   }
 
+  @media (max-width: 480px) {
+    .signin-form-title {
+      font-size: 22px;
+      height: 24px;
+      line-height: 24px;
+    }
+  }
+
   .signin-form-content {
     width: 520px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 36px;
+  }
+
+  @media (max-width: 768px) {
+    .signin-form-content {
+      width: 100%;
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .signin-form-content {
+      width: 100%;
+      gap: 20px;
+    }
   }
 
   .signin-form-fields {
@@ -705,12 +807,26 @@
     gap: 24px;
   }
 
+  @media (max-width: 768px) {
+    .signin-form-fields {
+      width: 100%;
+      gap: 20px;
+    }
+  }
+
   .signin-form-inputs {
     width: 520px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .signin-form-inputs {
+      width: 100%;
+      gap: 14px;
+    }
   }
 
   .signin-button {
@@ -729,6 +845,15 @@
     color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.2s;
+    align-self: center;
+  }
+
+  @media (max-width: 768px) {
+    .signin-button {
+      width: 100%;
+      height: 52px;
+      font-size: 15px;
+    }
   }
 
   .signin-button:hover:not(:disabled) {
@@ -741,12 +866,24 @@
     background: #ECECEC;
   }
 
+  @media (max-width: 768px) {
+    .signin-divider {
+      width: 100%;
+    }
+  }
+
   .signin-social-section {
     width: 520px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .signin-social-section {
+      width: 100%;
+    }
   }
 
   .signin-social-label {
@@ -760,6 +897,13 @@
     color: #171E1D;
   }
 
+  @media (max-width: 480px) {
+    .signin-social-label {
+      font-size: 14px;
+      height: 22px;
+    }
+  }
+
   .signin-social-buttons {
     width: 520px;
     display: flex;
@@ -767,6 +911,21 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 14px;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .signin-social-buttons {
+      width: 100%;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .signin-social-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   .signin-social-button {
@@ -783,6 +942,26 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  @media (max-width: 768px) {
+    .signin-social-button {
+      width: calc(50% - 6px);
+      height: 110px;
+      padding: 20px;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .signin-social-button {
+      width: 100%;
+      height: 100px;
+      padding: 16px;
+      gap: 10px;
+    }
   }
 
   .signin-social-button:hover {
@@ -792,6 +971,13 @@
   .signin-social-button img {
     width: 40px;
     height: 40px;
+  }
+
+  @media (max-width: 480px) {
+    .signin-social-button img {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   .signin-social-button span {
@@ -814,6 +1000,18 @@
     color: #576074;
     text-align: center;
   }
+
+  @media (max-width: 480px) {
+    .signin-signup-link {
+      font-size: 14px;
+      height: 22px;
+      line-height: 22px;
+    }
+  }
+
+  /* ============================================
+     HOMEPAGE & SEARCH SECTION STYLES
+     ============================================ */
 
   /* SearchBar Figma Specs */
   .search-form-container {
@@ -987,6 +1185,10 @@
     background-color: #f5f5f5;
     color: #171E1D;
   }
+
+  /* ============================================
+     SIMILAR STAYS & STAY CARD STYLES
+     ============================================ */
 
   /* StayCard - Figma Specs */
   .stay-card {

@@ -22,10 +22,12 @@ export default function Signin() {
     <>
       <Navbar />
       <div
-        className="w-full h-screen bg-cover bg-center flex items-center justify-center p-5"
+        className="w-full min-h-screen bg-cover bg-center flex items-center justify-center px-4 sm:px-5 py-8 sm:py-0"
         style={{ backgroundImage: "url('/assets/images/bg.png')" }}
       >
-        <SigninForm />
+        <div className="w-full sm:w-auto">
+          <SigninForm />
+        </div>
       </div>
       <Brand />
     </>
