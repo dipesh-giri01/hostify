@@ -7,6 +7,7 @@ import properties from '@/data/properties.json';
 import { useParams } from 'next/navigation';
 import { useState, Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 import amenities from '@/app/constants/amentities';
 import PropertyGallery from '@/components/gallery/PropertyGallery';
 import InfoCard from '@/components/info-card/InfoCard';
@@ -31,13 +32,11 @@ export default function PropertyDetailsPage() {
   const property = properties.properties.find(p => p.id === propertyId);
   
   if (!property) {
-    return <div className="flex items-center justify-center min-h-screen">Property not found</div>;
+    notFound();
   }
 
-  // Gallery - get deterministic gallery images based on property ID
   const getGalleryImages = () => {
     const allProperties = properties.properties.slice(0, 16);
-    // Use property ID as seed for deterministic selection
     const startIndex = (propertyId * 7) % allProperties.length;
     const selected = [];
     for (let i = 0; i < 6; i++) {
@@ -59,7 +58,6 @@ export default function PropertyDetailsPage() {
     const sameAreaProperties = properties.properties.filter(p => 
       p.id !== propertyId && p.location.includes(currentArea)
     );
-    // Use property ID as seed for deterministic selection
     const startIndex = (propertyId * 3) % Math.max(1, sameAreaProperties.length);
     const selected = sameAreaProperties.slice(startIndex).concat(sameAreaProperties.slice(0, startIndex));
     
