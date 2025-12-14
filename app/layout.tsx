@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Archivo } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import "../styles/theme.css";
 
@@ -34,7 +35,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} antialiased`}
       >
-       {children}
+        {children}
+        <Analytics />
       </body>
     </html>
   );
