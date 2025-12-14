@@ -170,6 +170,41 @@
     background-color: #F4F4F4;
   }
 
+  /* Footer Columns - Figma Specs */
+  .footer-column {
+    width: 440px;
+    height: auto;
+    min-width: 280px;
+    gap: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column-title {
+    font-family: 'Archivo';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #171E1D;
+    margin: 0;
+  }
+
+  .footer-column-link {
+    font-family: 'Archivo';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #171E1D;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-column-link:hover {
+    color: #FF8D28;
+  }
+
   .brand-height {
     height: 41px;
   }
@@ -204,12 +239,16 @@
     height: 438px;
     min-height: 438px;
     border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .gallery-thumbs-height {
     height: 86px;
-    overflow-x: scroll;
+    overflow: hidden;
     gap: 10px;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .thumb-width {
@@ -374,6 +413,11 @@
     width: 812px;
     height: 539px;
     gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   /* InfoCard */
@@ -413,6 +457,48 @@
     line-height: 17px;
     font-weight: 400;
     color: #171E1D;
+  }
+
+  /* Rating Container - Figma Specs */
+  .rating-container {
+    width: 40px;
+    height: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+    gap: 6px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .rating-text {
+    width: 21px;
+    height: 10px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #171E1D;
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .rating-star {
+    width: 13px;
+    height: 13px;
+    background: #FAC50A;
+    flex-shrink: 0;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
   }
 
   .info-card-rating {
@@ -861,6 +947,303 @@
 
   .search-button:hover {
     background-color: #ff7a0a;
+  }
+
+  /* Show All Amenities Button - Figma Specs */
+  .show-all-amenities-button {
+    width: 185px;
+    height: 48px;
+    padding-top: 11px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    gap: 9px;
+    border: 1px solid #171E1D;
+    border-radius: 6px;
+    background: #FFFFFF;
+    opacity: 1;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+    
+    /* Typography */
+    font-family: 'Archivo';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    text-align: center;
+    color: #171E1D;
+    white-space: nowrap;
+  }
+
+  .show-all-amenities-button:hover {
+    background-color: #f5f5f5;
+    color: #171E1D;
+  }
+
+  /* StayCard - Figma Specs */
+  .stay-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 433.33px;
+    min-width: 370px;
+    height: 130px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+
+  /* Stay Card Image Container */
+  .stay-card-image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    width: 180px;
+    min-width: 150px;
+    max-width: 180px;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 0px 0px 10px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  /* Superhost Tag */
+  .stay-card-superhost-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 7px;
+    gap: 2px;
+    margin: 0 auto;
+    width: 78.7px;
+    height: 22.04px;
+    background: #FFFFFF;
+    border-radius: 13px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .stay-card-superhost-icon {
+    width: 6.7px;
+    height: 10.04px;
+    background: #FF8D28;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .stay-card-superhost-text {
+    width: 56px;
+    height: 8px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: -0.01em;
+    color: #FF8D28;
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  /* Heart Icon */
+  .stay-card-heart-icon {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Content Container */
+  .stay-card-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 20px;
+    width: 253.33px;
+    min-width: 220px;
+    height: 130px;
+    border: 1px solid #E8ECF2;
+    border-radius: 0px 10px 10px 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+  }
+
+  /* Stay Card Content Inner */
+  .stay-card-content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Stay Card Text Content */
+  .stay-card-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    width: 100%;
+    height: auto;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Name */
+  .stay-card-name {
+    width: 100%;
+    height: 17px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #171E1D;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Place */
+  .stay-card-place {
+    width: 100%;
+    height: 15px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #787878;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Rating Container */
+  .stay-card-rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+    width: 40px;
+    height: 13px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Rating */
+  .stay-card-rating {
+    width: 21px;
+    height: 10px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #171E1D;
+    display: flex;
+    align-items: center;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  /* Star Icon in Rating */
+  .stay-card-star-icon {
+    width: 13px;
+    height: 13px;
+    background: #FAC50A;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Price Container */
+  .stay-card-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 2px;
+    width: 100%;
+    height: 17px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Price */
+  .stay-card-price {
+    width: auto;
+    height: 17px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #FF8D28;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  /* Stay Card Price Unit */
+  .stay-card-price-unit {
+    width: auto;
+    height: 15px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #787878;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
   }
 
   input {

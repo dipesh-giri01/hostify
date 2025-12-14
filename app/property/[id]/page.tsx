@@ -7,14 +7,11 @@ import properties from '@/data/properties.json';
 import { useParams } from 'next/navigation';
 import { useState, Suspense } from 'react';
 import dynamic from 'next/dynamic';
-import { 
-  MapPoint,
-  Weather,
-} from '@/components/icons';
 import amenities from '@/app/constants/amentities';
 import PropertyGallery from '@/components/gallery/PropertyGallery';
 import InfoCard from '@/components/info-card/InfoCard';
 import AboutSection from '@/components/about-section/AboutSection';
+import AmenitiesAndWeatherSection from '@/components/amenities-and-weather-section/AmenitiesAndWeatherSection';
 
 // Dynamic imports with loading fallbacks
 const GoogleMap = dynamic(() => import('@/components/map/GoogleMap'), {
@@ -102,58 +99,13 @@ export default function PropertyDetailsPage() {
           onToggleShowMore={() => setShowFullAbout(!showFullAbout)}
         />
 
-        {/* Amenities List & Map/Weather */}
-        <section className="w-full header-content flex flex-col gap-section mb-11">
-          <div className="flex flex-col lg:flex-row gap-5 w-full">
-            {/* Amenities List */}
-            <div className="flex flex-col gap-5 w-full lg:amenities-section-width">
-              <h3 className="text-2xl font-semibold leading-7 tracking-wider text-gray-900 font-archivo mb-1">Amenities</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-5 w-full">
-                {amenities.map((a, i) => {
-                  const IconComponent = a.icon;
-                  return (
-                    <div key={i} className="flex flex-row items-center gap-2">
-                      {IconComponent ? (
-                        <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
-                          <IconComponent />
-                        </div>
-                      ) : (
-                        <div className="w-5 h-5 bg-gray-200 rounded flex items-center justify-center flex-shrink-0"></div>
-                      )}
-                      <span className="text-base font-normal leading-5 text-gray-900 font-archivo">{a.label}</span>
-                    </div>
-                  );
-                })}
-              </div>
-              <button className="mt-4 border border-gray-900 rounded-md px-5 py-3 text-base font-semibold leading-7 text-gray-900 font-archivo w-48 h-12 hover:bg-gray-50 transition">Show all amenities</button>
-            </div>
-
-            {/* Map/Weather */}
-            <div className="flex flex-col gap-2.5 w-full lg:map-section-width">
-              <div className="flex flex-row justify-between items-start gap-5 w-full h-auto">
-                <div className="flex flex-col gap-1.5">
-                  <h3 className="text-2xl font-semibold leading-7 tracking-wider text-gray-900 font-archivo">Where you'll be</h3>
-                  <div className="flex flex-row items-center gap-1.5">
-                    <MapPoint />
-                    <span className="text-base font-normal leading-5 text-gray-900 font-archivo">{property.location.split(',')[0]}</span>
-                  </div>
-                </div>
-                <div className="flex flex-row items-start gap-2.5">
-                  <div className="weather-icon-size bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Weather />
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-base font-semibold leading-6 tracking-wider text-gray-900 font-archivo">20°C</span>
-                    <span className="text-sm font-normal leading-4 tracking-wider text-gray-500 font-archivo">Broken clouds</span>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full map-height rounded-lg overflow-hidden relative mt-1">
-                <GoogleMap location={property.location} className="w-full h-full" />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Amenities & Weather Section */}
+        <AmenitiesAndWeatherSection 
+          amenities={amenities} 
+          location={property.location}
+          temperature={20}
+          condition="Broken clouds"
+        />
 
         {/* Similar stays */}
         <SimilarStays stays={similarStays} />

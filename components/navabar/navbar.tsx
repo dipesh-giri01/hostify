@@ -72,9 +72,9 @@ const Navbar = () => {
                 Stays
               </Link>
               <Link
-                href="/become-a-host"
+                href={ROUTES.SIGNIN}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm
-                  ${usePathname() === "/become-a-host" 
+                  ${usePathname() === ROUTES.SIGNIN 
                     ? "text-orange-500 bg-orange-50" 
                     : "text-gray-700 hover:text-orange-500 hover:bg-orange-50"
                   }

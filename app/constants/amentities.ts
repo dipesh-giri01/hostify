@@ -13,7 +13,12 @@ import {
     Freezer,
 } from '@/components/icons';
 
-const amenities = [
+export interface Amenity {
+  label: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+const amenities: Amenity[] = [
     { label: 'Lakeside', icon: LandSlide },
     { label: 'Kitchen', icon: Kitchen },
     { label: 'Security cameras on property', icon: CameraIcon },

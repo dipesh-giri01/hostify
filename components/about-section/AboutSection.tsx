@@ -1,5 +1,4 @@
 import { detailCards } from '@/app/constants/detailCards';
-import Button from '@/components/button/Button';
 
 interface AboutSectionProps {
   propertyName: string;
@@ -42,14 +41,12 @@ export default function AboutSection({
                 </>
               )}
             </p>
-            <Button 
+            <button 
               onClick={onToggleShowMore}
-              variant="secondary"
-              size="sm"
-              className="cursor-pointer mt-4"
+              className="about-show-more-button"
             >
               {showFullAbout ? "Show less" : "Show more"}
-            </Button>
+            </button>
           </div>
           
           {/* Detail Cards */}

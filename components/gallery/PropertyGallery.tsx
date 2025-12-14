@@ -10,8 +10,8 @@ interface PropertyGalleryProps {
 export default function PropertyGallery({ images }: PropertyGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   
-  // showing 5 images for gallery 
-  const displayImages = images.slice(0, 5);
+  // showing 4 images for gallery (Figma spec: 160px × 86px each with 10px gap)
+  const displayImages = images.slice(0, 4);
 
   return (
     <div className="flex flex-col gallery-container">
